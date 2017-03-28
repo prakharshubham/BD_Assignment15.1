@@ -1,0 +1,6 @@
+create table emp ( emp_name string, tech string, class int, loc string) row format delimited fields terminated by ',' ;	
+
+load data local inpath '/home/acadgild/hive/emp_details.txt' into table emp;
+
+ select tech,count(*) from emp group by tech;
+
